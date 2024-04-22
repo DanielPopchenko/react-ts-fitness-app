@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body,
+#root,
+.app {
+    width: 100%;
+    height: 100%;
+    font-family: 'DM Sans', sans-serif;
+    /* ! this line appplies code and value from our tailwind.config.js */
+    @apply text-gray-500;
+}
