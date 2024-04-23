@@ -4,6 +4,7 @@ import { SelectedPageEnum } from './shared/types';
 import Home from '@/components/home/Home';
 import Benefits from '@/components/benefits/Benefits';
 import OurClasses from '@/components/classes/OurClasses';
+import ContactUs from '@/components/contact-us/ContactUs';
 
 export default function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPageEnum>(
@@ -40,6 +41,7 @@ export default function App() {
       <Home setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
       <OurClasses setSelectedPage={setSelectedPage} />
+      <ContactUs setSelectedPage={setSelectedPage} />
     </div>
   );
 }

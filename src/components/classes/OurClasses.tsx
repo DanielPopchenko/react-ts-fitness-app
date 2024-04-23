@@ -8,6 +8,7 @@ import img5 from '@/assets/image5.png';
 import img6 from '@/assets/image6.png';
 import { motion } from 'framer-motion';
 import HeadingText from '@/shared/HeadingText';
+import Class from './Class';
 
 const classes: Array<IClass> = [
   {
@@ -80,9 +81,14 @@ const OurClasses = ({ setSelectedPage }: IProps) => {
           do not move the text to the next line
            */}
           <ul className="w-[2800px] whitespace-nowrap">
-            {classes.map(() => {
-              return {};
-            })}
+            {classes.map((ourclass: IClass, idx) => (
+              <Class
+                key={`${ourclass.name}-${idx}`}
+                description={ourclass.description}
+                image={ourclass.image}
+                name={ourclass.name}
+              />
+            ))}
           </ul>
         </div>
       </motion.div>
