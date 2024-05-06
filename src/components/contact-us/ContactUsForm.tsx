@@ -1,5 +1,4 @@
-import { error } from 'console';
-import React, { FormEvent } from 'react';
+import { FormEvent } from 'react';
 import { useForm } from 'react-hook-form';
 
 type Props = {};

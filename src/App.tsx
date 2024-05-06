@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Navbar } from './components/navbar/Navbar';
+import { Navbar } from '@/components/navbar/Navbar';
 import { SelectedPageEnum } from './shared/types';
 import Home from '@/components/home/Home';
 import Benefits from '@/components/benefits/Benefits';

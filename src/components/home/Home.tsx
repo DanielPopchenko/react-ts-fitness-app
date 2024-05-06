@@ -1,5 +1,4 @@
 import { SelectedPageEnum } from '@/shared/types';
-import React from 'react';
 import ActionButton from '@/shared/ActionButton';
 import HomePageGraphic from '@/assets/HomePageGraphic.png';
 import HomePageText from '@/assets/HomePageText.png';
