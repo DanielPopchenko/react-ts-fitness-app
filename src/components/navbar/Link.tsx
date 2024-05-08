@@ -11,12 +11,15 @@ const Link = ({ page, selectedPage, setSelectedPage }: IProps) => {
   // ! .replace(/ /g, "")  - replaces spaces
   const lowerCasedPage = page.toLowerCase().replace(/ /g, '') as SelectedPageEnum;
 
+  console.log('page: ', page);
+  console.log('selectedPage: ', selectedPage);
+
   const handleClick = () => {};
   return (
     <AnchorLink
       className={`${selectedPage === lowerCasedPage ? 'text-primary-500' : ''} transition duration-500 hover:text-primary-300 cursor-pointer`}
-      href={`#${lowerCasedPage}`}
       onClick={() => setSelectedPage(lowerCasedPage)}
+      href={`#${lowerCasedPage}`}
     >
       {page}
     </AnchorLink>

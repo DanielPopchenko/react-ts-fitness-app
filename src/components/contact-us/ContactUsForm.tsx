@@ -1,29 +1,54 @@
-import { FormEvent } from 'react';
-import { useForm } from 'react-hook-form';
+import { FormEvent, useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 
-type Props = {};
+interface Inputs {
+  name: string;
+  email: string;
+  message: string;
+}
 
-const ContactUsForm = (props: Props) => {
+const ContactUsForm = () => {
+  const [isError, setIsError] = useState(false);
+
   const {
     register,
     reset,
     trigger,
+    handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<Inputs>();
 
   const inputStyles = 'w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white mb-5';
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    console.log(data);
+
     const isValid = await trigger();
 
     if (!isValid) {
-      e.preventDefault();
+      setIsError(true);
     }
+    Swal.fire({
+      title: 'Well done!',
+      text: 'We`ve submitted your data!',
+      icon: 'success',
+    });
+
+    reset();
   };
+
+  // const handleSubmit = async () => {
+  // const isValid = await trigger();
+
+  // if (!isValid) {
+  //   e.preventDefault();
+  // }
+  // };
   return (
     <form
       target="_blank"
-      onSubmit={handleSubmit}
+      onSubmit={handleSubmit(onSubmit)}
       method="POST"
       action="https://formsubmit.co/2e6c76f9713e50a8a89f6cbc953fb369"
     >
