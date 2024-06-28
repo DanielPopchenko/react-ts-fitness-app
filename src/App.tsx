@@ -5,14 +5,30 @@ import Home from '@/components/home/Home';
 import Benefits from '@/components/benefits/Benefits';
 import OurClasses from '@/components/classes/OurClasses';
 import ContactUs from '@/components/contact-us/ContactUs';
+import Modal from './components/modal/Modal';
+
+export interface IUser {
+  name: string;
+  email: string;
+}
 
 export default function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPageEnum>(
     SelectedPageEnum.Home,
   );
 
+  const [user, setUser] = useState<IUser | null>(null);
+
+  console.log(user);
+
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+
   // ! THIS IS FOR NAVBAR TO HAVE RED BG WHEN MOVING FROM THE TOP
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
+
+  const toggleModal = () => {
+    setModalOpen((prev) => !prev);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,12 +53,17 @@ export default function App() {
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
+        user={user}
+        setUser={setUser}
+        toggleOpen={toggleModal}
       />
 
       <Home setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
       <OurClasses setSelectedPage={setSelectedPage} />
       <ContactUs setSelectedPage={setSelectedPage} />
+
+      {modalOpen && <Modal user={user} setUser={setUser} toggleOpen={toggleModal} />}
     </div>
   );
 }
