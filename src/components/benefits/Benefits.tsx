@@ -66,6 +66,7 @@ const Benefits = ({ setSelectedPage }: IProps) => {
             explicabo quos soluta cum unde, rem hic numquam!
           </p>
         </motion.div>
+
         {/* Benefits section */}
         <motion.div
           initial="hidden"
@@ -85,6 +86,7 @@ const Benefits = ({ setSelectedPage }: IProps) => {
             />
           ))}
         </motion.div>
+
         {/* graphics and description */}
         <div className="md:flex md:mt-28 mt-16 gap-16 justify-between items-center">
           {/* GRAPHIC */}
