@@ -28,11 +28,6 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           <HeadingText>
             <span className="text-primary-500">JOIN NOW</span> TO GET IN SHAPE
           </HeadingText>
-          <p className="my-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio in, error
-            optio vitae earum porro totam velit fugit quisquam corrupti recusandae aperiam
-            odio harum sit architecto! Est adipisci ab sint.
-          </p>
         </motion.div>
 
         {/* FORM AND IMAGE */}

@@ -1,33 +1,35 @@
 import { IBenefit, SelectedPageEnum } from '@/shared/types';
-import {
-  AcademicCapIcon,
-  HomeModernIcon,
-  UserGroupIcon,
-} from '@heroicons/react/24/solid';
+// import {
+//   AcademicCapIcon,
+//   HomeModernIcon,
+//   UserGroupIcon,
+// } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
 import HeadingText from '@/shared/HeadingText';
 import Benefit from './Benefit';
 import ActionButton from '@/shared/ActionButton';
 import BenefitsPageGraphic from '@/assets/BenefitsPageGraphic.png';
 
+import { benefits } from './benefitElements';
+
 // ! we tell ts that this is an array of objects
-const benefits: Array<IBenefit> = [
-  {
-    icon: <HomeModernIcon className="h-6 w-6" />,
-    title: 'State of the art facilities',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, corrupti animi est sapiente, qui sit unde quis dicta nulla ad earum autem iste quidem quasi itaque reiciendis eligendi, aspernatur beatae!',
-  },
-  {
-    icon: <AcademicCapIcon className="h-6 w-6" />,
-    title: 'Expert coaches',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, corrupti animi est sapiente, qui sit unde quis dicta nulla ad earum autem iste quidem quasi itaque reiciendis eligendi, aspernatur beatae!',
-  },
-  {
-    icon: <UserGroupIcon className="h-6 w-6" />,
-    title: '100`s of diverse classes',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, corrupti animi est sapiente, qui sit unde quis dicta nulla ad earum autem iste quidem quasi itaque reiciendis eligendi, aspernatur beatae!',
-  },
-];
+// const benefits: Array<IBenefit> = [
+//   {
+//     icon: <HomeModernIcon className="h-6 w-6" />,
+//     title: 'State of the art facilities',
+//     text: 'Experience the latest in fitness technology and amenities. Our modern equipment and clean, spacious environment are designed to enhance your workout experience and help you achieve your fitness goals.',
+//   },
+//   {
+//     icon: <AcademicCapIcon className="h-6 w-6" />,
+//     title: 'Expert coaches',
+//     text: 'Our team of certified trainers is dedicated to guiding you every step of the way. With personalized attention and tailored workout plans, our expert coaches help you push your limits and reach your full potential.',
+//   },
+//   {
+//     icon: <UserGroupIcon className="h-6 w-6" />,
+//     title: '100`s of diverse classes',
+//     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, corrupti animi est sapiente, qui sit unde quis dicta nulla ad earum autem iste quidem quasi itaque reiciendis eligendi, aspernatur beatae!',
+//   },
+// ];
 
 const container = {
   hidden: {},
@@ -61,9 +63,11 @@ const Benefits = ({ setSelectedPage }: IProps) => {
         >
           <HeadingText>MORE THAN JUST A GYM.</HeadingText>
           <p className="my-5 text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod atque quaerat
-            labore at dolore. Error, porro id. Officia, tempore neque labore consectetur
-            explicabo quos soluta cum unde, rem hic numquam!
+            At Evogym, we redefine fitness with state-of-the-art facilities, expert
+            coaches, and a diverse range of classes. We are committed to providing an
+            exceptional experience that goes beyond traditional workouts. Our members
+            enjoy a holistic approach to health and wellness in an environment that
+            fosters growth and achievement.
           </p>
         </motion.div>
 
@@ -133,18 +137,12 @@ const Benefits = ({ setSelectedPage }: IProps) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="my-5">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur
-                porro tempora sint repellendus voluptas temporibus iste aut quaerat?
-                Blanditiis possimus natus corporis eaque suscipit aperiam nemo earum
-                veniam aspernatur vitae?
-              </p>
-
               <p className="my-5 mb-5">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur
-                porro tempora sint repellendus voluptas temporibus iste aut quaerat?
-                Blanditiis possimus natus corporis eaque suscipit aperiam nemo earum
-                veniam aspernatur vitae?
+                Join the ranks of our many satisfied members who have transformed their
+                lives with Evogym. Our proven approach and supportive community have
+                helped countless individuals achieve their fitness goals and enjoy a
+                healthier lifestyle. Experience the difference that has made us a favorite
+                choice for fitness enthusiasts everywhere.
               </p>
             </motion.div>
 

@@ -6,6 +6,7 @@ import Benefits from '@/components/benefits/Benefits';
 import OurClasses from '@/components/classes/OurClasses';
 import ContactUs from '@/components/contact-us/ContactUs';
 import Modal from './components/modal/Modal';
+import Footer from '@/components/footer/Footer';
 
 export interface IUser {
   name: string;
@@ -62,6 +63,7 @@ export default function App() {
       <Benefits setSelectedPage={setSelectedPage} />
       <OurClasses setSelectedPage={setSelectedPage} />
       <ContactUs setSelectedPage={setSelectedPage} />
+      <Footer />
 
       {modalOpen && <Modal user={user} setUser={setUser} toggleOpen={toggleModal} />}
     </div>

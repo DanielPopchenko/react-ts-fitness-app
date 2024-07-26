@@ -6,9 +6,10 @@ html,
 body,
 #root,
 .app {
-    width: 100%;
-    height: 100%;
-    font-family: 'DM Sans', sans-serif;
-    /* ! this line appplies code and value from our tailwind.config.js */
-    @apply text-gray-500;
+  width: 100%;
+  height: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 19px;
+  /* ! this line appplies code and value from our tailwind.config.js */
+  @apply text-gray-500;
 }

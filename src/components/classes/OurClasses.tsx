@@ -1,49 +1,8 @@
 import { SelectedPageEnum, IClass } from '@/shared/types';
-
-import img1 from '@/assets/image1.png';
-import img2 from '@/assets/image2.png';
-import img3 from '@/assets/image3.png';
-import img4 from '@/assets/image4.png';
-import img5 from '@/assets/image5.png';
-import img6 from '@/assets/image6.png';
 import { motion } from 'framer-motion';
 import HeadingText from '@/shared/HeadingText';
 import Class from './Class';
-
-const classes: Array<IClass> = [
-  {
-    name: 'First class',
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos quidem ad consequatur consectetur hic natus autem ipsa error maiores. Quod qui quis enim itaque consectetur? Provident, aspernatur dolores? Vitae, nisi?',
-    image: img1,
-  },
-  {
-    name: 'Second class',
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos quidem ad consequatur consectetur hic natus autem ipsa error maiores. Quod qui quis enim itaque consectetur? Provident, aspernatur dolores? Vitae, nisi?',
-    image: img2,
-  },
-  {
-    name: 'Third class',
-    image: img3,
-  },
-  {
-    name: 'Fourth class',
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos quidem ad consequatur consectetur hic natus autem ipsa error maiores. Quod qui quis enim itaque consectetur? Provident, aspernatur dolores? Vitae, nisi?',
-    image: img4,
-  },
-  {
-    name: 'Fifth class',
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos quidem ad consequatur consectetur hic natus autem ipsa error maiores. Quod qui quis enim itaque consectetur? Provident, aspernatur dolores? Vitae, nisi?',
-    image: img5,
-  },
-  {
-    name: 'Sixth class',
-    image: img6,
-  },
-];
+import { classes } from './classes';
 
 interface IProps {
   setSelectedPage: (value: SelectedPageEnum) => void;
@@ -51,7 +10,7 @@ interface IProps {
 
 const OurClasses = ({ setSelectedPage }: IProps) => {
   return (
-    <div id={`#${SelectedPageEnum.OurClasses}`} className="w-full bg-primary-100 py-40">
+    <div id="ourclasses" className="w-full bg-primary-100 py-40">
       <motion.div
         // ! function in it triggers when the el enters a viewport
         onViewportEnter={() => setSelectedPage(SelectedPageEnum.OurClasses)}
@@ -69,9 +28,10 @@ const OurClasses = ({ setSelectedPage }: IProps) => {
         >
           <HeadingText>Our classes</HeadingText>
           <p className="py-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi amet nam
-            unde dignissimos! Reprehenderit doloribus enim ullam, fugit ducimus totam eum
-            nostrum perferendis officia commodi ab odit harum rem! Facere.
+            At Evogym, we offer a diverse range of classes designed to cater to all
+            fitness levels and interests. Whether you're looking to build strength,
+            improve flexibility, or boost cardiovascular health, we have something for
+            everyone.
           </p>
         </motion.div>
         {/* SIDE SCROLLING */}

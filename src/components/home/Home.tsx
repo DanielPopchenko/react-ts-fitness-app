@@ -16,7 +16,7 @@ interface IProps {
 const Home = ({ setSelectedPage }: IProps) => {
   const isAboveMediumScreens = useMediaQuery('(min-width:1060px)');
   return (
-    <section className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
+    <section className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0" id="home">
       {/* Image and main header */}
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPageEnum.Home)}
@@ -45,9 +45,11 @@ const Home = ({ setSelectedPage }: IProps) => {
               </div>
             </div>
             <p className="mt-8 text-sm ">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum libero
-              optio molestiae modi excepturi deserunt. Iste minima, impedit rerum magni at
-              eaque debitis, quidem et dignissimos ullam natus obcaecati? Velit.
+              Welcome to Evogym, where your fitness journey begins. Our cutting-edge
+              facility is designed to support and inspire you every step of the way.
+              Discover a new standard in fitness with personalized programs, expert
+              guidance, and a supportive community. Transform your body and mind with us
+              today!
             </p>
           </motion.div>
           {/* actions */}
